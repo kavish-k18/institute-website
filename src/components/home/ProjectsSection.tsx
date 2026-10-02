@@ -9,30 +9,26 @@ const projects = [
   { name: "AI Knowledge Assistant", desc: "RAG-powered internal wiki assistant capable of querying company documents.", tech: ["RAG", "VectorDB", "FastAPI"], difficulty: "Beginner" },
   { name: "AI Research Agent", desc: "Autonomous agent that searches the web, digests articles, and compiles research reports.", tech: ["LangGraph", "Tavily", "Anthropic"], difficulty: "Advanced" },
   { name: "AI Customer Support", desc: "Multi-channel support bot with human handoff capabilities and sentiment analysis.", tech: ["CrewAI", "Twilio", "Python"], difficulty: "Intermediate" },
-  { name: "AI Recruitment Agent", desc: "Automated screening system that evaluates candidate technical tests.", tech: ["Agents", "Docker", "OpenAI"], difficulty: "Advanced" },
-  { name: "BI Analysis Agent", desc: "Talk to your database: natural language to SQL agent with data visualization.", tech: ["SQLAgent", "Pandas", "Streamlit"], difficulty: "Advanced" },
-  { name: "Business Automation", desc: "Multi-agent system automating invoice processing and email responses.", tech: ["CrewAI", "Google APIs", "Python"], difficulty: "Intermediate" },
   { name: "Document Intelligence", desc: "Extract structured JSON data from unstructured PDFs and images.", tech: ["Vision API", "OCR", "Pydantic"], difficulty: "Intermediate" },
-  { name: "Workflow Agent", desc: "Integration agent connecting multiple SaaS tools based on natural language commands.", tech: ["LangChain", "Webhooks", "FastAPI"], difficulty: "Advanced" },
-  { name: "Disaster Intelligence", desc: "Real-time news monitoring agent for supply chain disruption alerts.", tech: ["NewsAPI", "Agents", "Next.js"], difficulty: "Advanced" }
+  { name: "Business Automation", desc: "Multi-agent system automating invoice processing and email responses.", tech: ["CrewAI", "Google APIs", "Python"], difficulty: "Advanced" }
 ];
 
 export default function ProjectsSection() {
   return (
-    <section className="py-24 bg-[#030712]">
+    <section id="projects" className="py-24 bg-[#030712]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Real Projects. <span className="text-blue-500">Real Engineering.</span></h2>
+            <div className="inline-block px-3 py-1 rounded-full bg-blue-900/30 border border-blue-700/50 text-blue-400 text-xs font-semibold tracking-wider mb-4 uppercase">
+              BUILD
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Don't Just Learn AI. <span className="text-blue-500">Build Systems.</span></h2>
             <p className="text-slate-400">Students learn by building systems inspired by real-world business and technology problems. No toy examples.</p>
           </div>
-          <Link href="/projects" className="text-blue-400 hover:text-blue-300 font-medium flex items-center gap-2 mt-4 md:mt-0 transition-colors">
-            View All Projects <ExternalLink className="w-4 h-4" />
-          </Link>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {projects.slice(0, 8).map((project, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -74,6 +70,12 @@ export default function ProjectsSection() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center">
+          <Link href="/program" className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-white/5 border border-white/10 hover:bg-white/10 text-white font-medium transition-all group">
+            Explore the Full Program <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>

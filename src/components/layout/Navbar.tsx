@@ -8,12 +8,10 @@ import { Menu, X, BrainCircuit } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "Programs", href: "/programs" },
-  { name: "Projects", href: "/projects" },
-  { name: "Students", href: "/students" },
-  { name: "Professionals", href: "/professionals" },
-  { name: "Corporate", href: "/corporate" },
-  { name: "Mentors", href: "/mentors" },
+  { name: "Institute", href: "/" },
+  { name: "Program", href: "/program" },
+  { name: "Projects", href: "/#projects" },
+  { name: "About", href: "/#about" },
 ];
 
 export default function Navbar() {
@@ -38,14 +36,14 @@ export default function Navbar() {
           : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <BrainCircuit className="w-8 h-8 text-blue-500 transition-transform group-hover:scale-110" />
+      <div className="container mx-auto px-4 md:px-8 max-w-[1400px] h-24 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3 group">
+          <BrainCircuit className="w-10 h-10 text-blue-500 transition-transform group-hover:scale-110" />
           <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-white leading-none">
+            <span className="text-2xl font-bold tracking-tight text-white leading-none">
               YOUR AI <span className="text-blue-500">INSTITUTE</span>
             </span>
-            <span className="text-[9px] font-mono text-blue-400 tracking-widest mt-1">AI ENGINEERING & AGENTIC SYSTEMS</span>
+            <span className="text-[10px] font-mono text-blue-400 tracking-widest mt-1.5">AI ENGINEERING & AGENTIC SYSTEMS</span>
           </div>
         </Link>
 
@@ -56,12 +54,12 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-blue-400 relative",
-                pathname.startsWith(link.href) ? "text-white" : "text-slate-300"
+                "text-base font-medium transition-colors hover:text-blue-400 relative",
+                (link.href === "/" ? pathname === "/" : pathname.startsWith(link.href) && link.href !== "/#projects" && link.href !== "/#about") ? "text-white" : "text-slate-300"
               )}
             >
               {link.name}
-              {pathname.startsWith(link.href) && (
+              {(link.href === "/" ? pathname === "/" : pathname.startsWith(link.href) && link.href !== "/#projects" && link.href !== "/#about") && (
                 <motion.div
                   layoutId="navbar-indicator"
                   className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-500"
@@ -72,12 +70,12 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <Link
-            href="/apply"
-            className="px-5 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 shadow-[0_0_15px_rgba(37,99,235,0.4)] transition-all"
+          <a
+            href="mailto:[REAL INSTITUTE EMAIL]"
+            className="px-6 py-3 text-base font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 shadow-[0_0_15px_rgba(37,99,235,0.4)] transition-all"
           >
             Apply Now
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -105,7 +103,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={cn(
                   "block px-4 py-2 text-base font-medium rounded-md",
-                  pathname.startsWith(link.href)
+                  (link.href === "/" ? pathname === "/" : pathname.startsWith(link.href) && link.href !== "/#projects" && link.href !== "/#about")
                     ? "bg-blue-900/50 text-blue-400"
                     : "text-slate-300 hover:bg-white/5 hover:text-white"
                 )}
@@ -113,13 +111,13 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Link
-              href="/apply"
+            <a
+              href="mailto:[REAL INSTITUTE EMAIL]"
               onClick={() => setMobileMenuOpen(false)}
               className="mt-4 px-4 py-3 text-center text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500"
             >
               Apply Now
-            </Link>
+            </a>
           </div>
         </motion.div>
       )}

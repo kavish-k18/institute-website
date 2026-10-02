@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, Hammer, Rocket, Trophy } from "lucide-react";
+import { BookOpen, Hammer, Rocket, Trophy, Target } from "lucide-react";
 
 const features = [
   {
@@ -20,9 +20,14 @@ const features = [
     description: "Turn AI prototypes into functional applications and production-ready systems."
   },
   {
+    icon: Target,
+    title: "EVALUATE",
+    description: "Implement observability, testing, and guardrails to ensure production quality."
+  },
+  {
     icon: Trophy,
-    title: "PROVE",
-    description: "Build a portfolio of projects that demonstrates practical engineering ability."
+    title: "PRESENT",
+    description: "Demonstrate your technical capability through industry-ready capstone projects."
   }
 ];
 
@@ -31,11 +36,14 @@ export default function FeaturesSection() {
     <section className="py-24 bg-[#050b14] relative border-t border-white/5">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Don't Just Learn AI. <span className="text-blue-500">Build It.</span></h2>
-          <p className="text-slate-400">Our philosophy is simple: the only way to master AI engineering is to build real systems from scratch and deploy them to production.</p>
+          <div className="inline-block px-3 py-1 rounded-full bg-blue-900/30 border border-blue-700/50 text-blue-400 text-xs font-semibold tracking-wider mb-4 uppercase">
+            THE INSTITUTE
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Learn AI by <span className="text-blue-500">Building It.</span></h2>
+          <p className="text-slate-400">100% practical AI engineering.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
           {features.map((feature, index) => (
             <motion.div
               key={index}

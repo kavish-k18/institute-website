@@ -10,11 +10,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "YOUR AI INSTITUTE | Build the Future with AI",
+  title: "AI Engineering & Agentic AI Institute | YOUR AI INSTITUTE",
   description: "Master AI Engineering and Agentic Systems through live training, real-world projects, mentorship, and production-focused learning.",
   openGraph: {
-    title: "YOUR AI INSTITUTE",
-    description: "Build the Future with AI. 6-Month Agentic AI Engineering Program.",
+    title: "AI Engineering & Agentic AI Institute | YOUR AI INSTITUTE",
+    description: "Learn to design, build, evaluate, and deploy modern AI systems. 6-Month Agentic AI Engineering Program.",
     type: "website",
   }
 };

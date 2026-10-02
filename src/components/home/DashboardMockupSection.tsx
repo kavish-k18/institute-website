@@ -39,66 +39,42 @@ export default function DashboardMockupSection() {
             {/* Window header */}
             <div className="bg-[#050b14] px-4 py-3 border-b border-white/5 flex items-center gap-2">
               <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                <div className="w-3 h-3 rounded-full bg-slate-700" />
+                <div className="w-3 h-3 rounded-full bg-slate-700" />
+                <div className="w-3 h-3 rounded-full bg-slate-700" />
               </div>
-              <div className="ml-4 flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="ml-4 flex items-center gap-2 text-xs text-slate-500 font-medium font-mono">
                 <LayoutDashboard className="w-3.5 h-3.5" />
-                Sample Student Dashboard
+                capstone-architecture-flow
               </div>
             </div>
             
             {/* Dashboard content */}
-            <div className="p-6">
-              <div className="flex justify-between items-end mb-6 border-b border-white/5 pb-4">
-                <div>
-                  <h4 className="font-bold">Student Dashboard</h4>
-                  <div className="text-sm text-slate-400">Agentic AI Engineering</div>
-                </div>
-                <div className="text-right">
-                  <div className="text-xs text-slate-400">Overall Progress</div>
-                  <div className="text-2xl font-bold text-blue-400">72%</div>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div>
-                  <div className="flex justify-between text-sm mb-2">
-                    <span className="text-slate-300">Current Module: Multi-Agent Systems</span>
-                    <span className="text-blue-400">In Progress</span>
-                  </div>
-                  <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                    <div className="h-full bg-blue-500 w-[60%]" />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="p-4 bg-white/5 rounded-xl border border-white/5">
-                    <div className="text-xs text-slate-400 mb-1">Upcoming Session</div>
-                    <div className="font-medium text-sm text-white">Live Agent Architecture Lab</div>
-                    <div className="text-xs text-blue-400 mt-2">Starts in 2 hours</div>
-                  </div>
-                  
-                  <div className="p-4 bg-white/5 rounded-xl border border-white/5">
-                    <div className="text-xs text-slate-400 mb-1">Current Project</div>
-                    <div className="font-medium text-sm text-white flex justify-between items-center">
-                      AI Business Automation
-                      <span className="text-green-400 text-xs">80%</span>
+            <div className="p-8 font-mono">
+              <div className="space-y-4 relative before:absolute before:inset-0 before:ml-[11px] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
+                
+                {[
+                  { step: "Problem", detail: "Identify real-world bottleneck" },
+                  { step: "Requirements", detail: "Define inputs, outputs, SLAs" },
+                  { step: "Architecture", detail: "Design multi-agent orchestration" },
+                  { step: "Implementation", detail: "Build with Python, LangGraph, LLMs" },
+                  { step: "Evaluation", detail: "Test against custom datasets" },
+                  { step: "Deployment", detail: "Dockerize and deploy to cloud" },
+                  { step: "Presentation", detail: "Defend design decisions" }
+                ].map((item, index) => (
+                  <div key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-slate-700 bg-[#0a192f] group-hover:border-blue-500 group-hover:bg-blue-500/20 text-slate-500 group-hover:text-blue-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 transition-colors">
+                      <Circle className="w-2 h-2 fill-current" />
                     </div>
-                    <div className="h-1.5 w-full bg-black/20 rounded-full overflow-hidden mt-2">
-                      <div className="h-full bg-green-500 w-[80%]" />
+                    <div className="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] p-4 rounded border border-slate-800 bg-white/5 hover:bg-white/10 transition-colors">
+                      <div className="flex items-center justify-between space-x-2 mb-1">
+                        <div className="font-bold text-slate-300 text-sm">{item.step}</div>
+                      </div>
+                      <div className="text-slate-500 text-xs">{item.detail}</div>
                     </div>
                   </div>
-                </div>
-
-                <div className="p-4 bg-blue-900/20 rounded-xl border border-blue-500/20 flex gap-3">
-                  <AlertCircle className="w-5 h-5 text-blue-400 shrink-0" />
-                  <div>
-                    <div className="text-sm font-medium text-blue-200">Mentor Feedback</div>
-                    <div className="text-xs text-blue-300/80 mt-1">"Review agent failure handling in your latest PR. Otherwise, looking solid."</div>
-                  </div>
-                </div>
+                ))}
+                
               </div>
             </div>
             </div>

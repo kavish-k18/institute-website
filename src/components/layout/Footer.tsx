@@ -61,15 +61,15 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-blue-500 shrink-0" />
-                <span>hello@youraiinstitute.placeholder</span>
+                <span>[REAL INSTITUTE EMAIL]</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-blue-500 shrink-0" />
-                <span>+1 (555) 000-0000</span>
+                <span>[REAL PHONE NUMBER]</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-500 shrink-0" />
-                <span>AI Engineering Hub<br />Innovation District, Tech City</span>
+                <span>[REAL LOCATION IF YOU WANT TO DISPLAY IT]</span>
               </li>
             </ul>
           </div>

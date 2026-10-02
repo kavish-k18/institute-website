@@ -41,8 +41,8 @@ export default function HeroSection() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">with AI.</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-slate-300 mb-4 leading-relaxed">
-              Master AI Engineering and Agentic Systems through live training, real-world projects, mentorship, and production-focused learning.
+            <p className="text-lg md:text-xl text-slate-300 mb-4 leading-relaxed max-w-xl">
+              Learn to design, build, evaluate, and deploy modern AI systems through live training, hands-on labs, industry-inspired projects, mentorship, and an end-to-end capstone.
             </p>
             
             <p className="text-sm font-mono text-blue-400 mb-8 tracking-wider">
@@ -50,25 +50,25 @@ export default function HeroSection() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Link href="/programs">
+              <Link href="/program">
                 <Button variant="glow" size="lg" className="w-full sm:w-auto">
-                  Explore Programs
+                  Explore the Program
                 </Button>
               </Link>
-              <Link href="/apply">
+              <a href="mailto:[REAL INSTITUTE EMAIL]">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto group">
                   Apply Now
                   <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </Link>
+              </a>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/10">
               {[
                 { label: "6-Month Program" },
-                { label: "Live Mentorship" },
-                { label: "Real-World Projects" },
-                { label: "Industry-Oriented" }
+                { label: "Live Training" },
+                { label: "Hands-On Projects" },
+                { label: "Industry-Oriented Learning" }
               ].map((feature, i) => (
                 <div key={i} className="flex flex-col gap-1">
                   <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mb-1" />

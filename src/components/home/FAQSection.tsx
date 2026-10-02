@@ -6,16 +6,14 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const faqs = [
-  { q: "Who can join the program?", a: "The program is designed for B.Tech/BCA/MCA/MSc students, fresh graduates, software developers, and working professionals looking to transition into AI engineering." },
-  { q: "Do I need prior AI experience?", a: "No prior AI experience is required, but a strong foundation in programming logic and willingness to learn is essential." },
-  { q: "Is Python required?", a: "Basic programming knowledge is expected. We cover Python from an AI engineering perspective, but prior programming experience in any language will help." },
-  { q: "Is the program suitable for working professionals?", a: "Yes, we offer flexible learning options with weekend and evening sessions designed specifically for working professionals." },
-  { q: "Are classes live?", a: "Yes, all core concepts, architecture discussions, and coding labs are conducted live." },
-  { q: "How many projects will I build?", a: "You will build 10+ applied AI projects throughout the curriculum, plus one comprehensive industry-oriented capstone project." },
-  { q: "Will I receive mentorship?", a: "Yes, you will have access to mentorship from experienced AI engineers who will review your code and guide your architecture decisions." },
-  { q: "What is the capstone project?", a: "The capstone is an end-to-end AI system that you design, build, and deploy to solve a real-world problem, acting as the centerpiece of your portfolio." },
-  { q: "Do students receive a certificate?", a: "Yes, upon successful completion of the program and defense of your capstone project, you will receive a verifiable certificate." },
-  { q: "Is there corporate training?", a: "Yes, we offer customized generative AI and agentic AI workshops for corporate teams. Please visit the Corporate Training section for details." }
+  { q: "Who is this program for?", a: "Students, developers, working professionals and technology learners interested in AI engineering and agentic systems." },
+  { q: "Do I need prior AI experience?", a: "No prior AI experience is required. The program builds progressively from foundations, though basic programming familiarity is helpful to get the most out of the technical labs." },
+  { q: "Is this only for students?", a: "No. The program is designed for both students and working professionals who want to transition into or upskill in AI engineering." },
+  { q: "Is the program live?", a: "Yes. The program is designed around live training, hands-on implementation, and guided learning with instructors and mentors." },
+  { q: "Will I build projects?", a: "Yes. The learning journey includes multiple industry-inspired projects and a comprehensive final capstone." },
+  { q: "What technologies will I learn?", a: "You will work with the modern AI engineering stack, including Python, leading LLMs (OpenAI, Anthropic, Gemini), agent frameworks (LangChain, LangGraph, CrewAI), vector databases, and production tools like Docker and FastAPI." },
+  { q: "How long is the program?", a: "The program spans 6 months (24 weeks) of structured learning and building." },
+  { q: "What do I receive at the end?", a: "You will leave with a portfolio of functional AI systems, GitHub repositories, architecture diagrams, technical documentation, evaluation reports, and the experience of presenting a production-ready capstone project." }
 ];
 
 export default function FAQSection() {
@@ -26,7 +24,7 @@ export default function FAQSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold mb-4">Frequently Asked <span className="text-blue-500">Questions</span></h2>
-          <p className="text-slate-400">Everything you need to know about our programs and methodology.</p>
+          <p className="text-slate-400">Everything you need to know about our program and methodology.</p>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">

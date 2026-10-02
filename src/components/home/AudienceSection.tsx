@@ -8,7 +8,8 @@ import { Button } from "@/components/ui/Button";
 export default function AudienceSection() {
   return (
     <section className="py-24 relative">
-      <div className="container mx-auto px-4 md:px-6 space-y-32">
+      <div className="container mx-auto px-4 md:px-6 space-y-24">
+        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center max-w-3xl mx-auto">Built for the Next Generation of <span className="text-blue-500">AI Builders.</span></h2>
         
         {/* For Students */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -20,6 +21,7 @@ export default function AudienceSection() {
             <div className="w-12 h-12 rounded-xl bg-blue-900/50 flex items-center justify-center mb-6">
               <GraduationCap className="w-6 h-6 text-blue-400" />
             </div>
+            <div className="text-sm font-bold text-blue-400 mb-2 tracking-widest">STUDENTS</div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Build Your AI Career <br/><span className="text-blue-500">Through Real Projects.</span></h2>
             <ul className="grid grid-cols-2 gap-4 mb-8">
               {['Live classes', 'Coding labs', 'Mentor guidance', 'Team projects', 'GitHub portfolio', 'Career-oriented learning'].map((item, i) => (
@@ -29,9 +31,9 @@ export default function AudienceSection() {
                 </li>
               ))}
             </ul>
-            <Link href="/students">
+            <Link href="/program">
               <Button variant="outline" className="group">
-                Explore Student Programs
+                Explore the Program
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -98,6 +100,7 @@ export default function AudienceSection() {
             <div className="w-12 h-12 rounded-xl bg-crimson-900/30 flex items-center justify-center mb-6 border border-crimson-500/20">
               <Briefcase className="w-6 h-6 text-crimson-400" />
             </div>
+            <div className="text-sm font-bold text-crimson-400 mb-2 tracking-widest">WORKING PROFESSIONALS</div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Upgrade Your AI Skills <br/><span className="text-crimson-500">Without Leaving Your Career.</span></h2>
             <ul className="grid grid-cols-2 gap-4 mb-8">
               {['Flexible learning', 'Weekend/evening options', 'Practical AI use cases', 'AI automation', 'Agentic AI', 'Enterprise AI'].map((item, i) => (
@@ -107,9 +110,9 @@ export default function AudienceSection() {
                 </li>
               ))}
             </ul>
-            <Link href="/professionals">
+            <Link href="/program">
               <Button variant="outline" className="group border-crimson-900 hover:bg-crimson-950 text-white">
-                Explore Professional Programs
+                Explore the Program
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -126,6 +129,7 @@ export default function AudienceSection() {
             <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center mb-6">
               <Building2 className="w-6 h-6 text-slate-300" />
             </div>
+            <div className="text-sm font-bold text-slate-400 mb-2 tracking-widest">TEAMS & ORGANIZATIONS</div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Build AI Capability <br/><span className="text-white">Across Your Organization.</span></h2>
             <ul className="grid grid-cols-2 gap-4 mb-8">
               {['Generative AI Workshops', 'Agentic AI Training', 'AI Automation', 'Custom AI Projects', 'Team Upskilling', 'Enterprise Workshops'].map((item, i) => (
@@ -135,9 +139,9 @@ export default function AudienceSection() {
                 </li>
               ))}
             </ul>
-            <Link href="/corporate">
+            <Link href="/program">
               <Button variant="outline" className="group">
-                Request Corporate Training
+                Explore the Program
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
